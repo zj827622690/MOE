@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>out</title>
+</head>
+<body>
+<input type="text" id="out" value="hi">
+<input type="button" value="receive">
+<script type="text/javascript">
+    var websocket = null;
+    //判断当前浏览器是否支持WebSocket
+    if ('WebSocket' in window) {
+        websocket = new WebSocket("ws://localhost:8080/websocket");
+    }
+    else {
+        alert('当前浏览器 Not support websocket')
+    }
+    websocket.onmessage = function (event) {
+        var out = document.getElementById("out");
+        out.value = event.data;
+    }
+</script>
+</body>
+</html>
