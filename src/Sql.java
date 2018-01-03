@@ -1,11 +1,13 @@
+import javax.websocket.*;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
+import java.io.IOException;
 import java.sql.*;
 
 @ServerEndpoint("/sql")
 public class Sql
 {
-    public void sqlcon(String[] args)
+    public void sqlcon()
     {
         Connection con;
         String url = "jdbc:mysql://localhost:3306/MOE";
@@ -54,4 +56,11 @@ public class Sql
             System.out.println("数据库成功获取数据");
         }
     }
+
+    @OnOpen
+    public void onOpen(Session session)
+    {
+        sqlcon();
+    }
 }
+
