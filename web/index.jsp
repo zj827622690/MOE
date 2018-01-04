@@ -53,6 +53,7 @@
     <h4>Don't have an account? <a href="#" >sign up</a></h4>
   </div>
 </div>
+<input type="text" id="test">
 </body>
 <footer>
 

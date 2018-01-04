@@ -1,4 +1,5 @@
 import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 import java.sql.*;
@@ -10,6 +11,8 @@ public class Login {
     String name;
     String pass;
     int flag=0;
+    Session session;
+
 
     public void sqlsearch()
     {
@@ -42,6 +45,7 @@ public class Login {
             }
             rs.close();
             con.close();
+            System.out.println(session.toString());
             if (flag == 1)
             {
                 System.out.println("用户存在");
@@ -50,6 +54,7 @@ public class Login {
             else
             {
                 System.out.println("用户不存在");
+                this.session.getBasicRemote().sendText("用户不存在");
             }
         }
         catch (ClassNotFoundException e)
@@ -89,5 +94,12 @@ public class Login {
             sqlsearch();
             get_flag=0;
         }
+    }
+
+    @OnOpen
+    public void onOpen(Session session)
+    {
+        this.session = session;
+        System.out.println(session.toString());
     }
 }
