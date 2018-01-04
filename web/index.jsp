@@ -29,7 +29,7 @@
     </div>
     <div>
       <h3 style="float: left;" style="font-family: tahoma;size: 30px;">password</h3>
-      <a href="#"  style="float: left; margin: 20px 0px 20px 320px;" >forgive password</a>
+      <a href="#"  style="float: left; margin: 20px 0px 20px 320px;" >forgot password</a>
     </div>
     <div style="clear: both;">
       <div class="input-group" style="width: 500px;height: 45px;">
