@@ -1,7 +1,7 @@
 var websocket = null;
 //判断当前浏览器是否支持WebSocket
 if ('WebSocket' in window) {
-    websocket = new WebSocket("ws://localhost:8080/websocket");
+    websocket = new WebSocket("ws://localhost:8080/login");
 }
 else {
     alert('当前浏览器 Not support websocket')
@@ -44,6 +44,29 @@ function closeWebSocket() {
 
 //发送消息
 function send() {
-    var message = document.getElementById('text').value;
-    websocket.send(message);
+    var user = document.getElementById('user').value;
+    var pass = document.getElementById('passwd').value;
+
+    websocket.send(user);
+    websocket.send(pass);
 }
+
+var i=0;
+function fun(j)
+{
+    i=1-i;
+    if(i==0)
+    {
+        var p=document.getElementById("passwd");
+        p.style.webkitTextSecurity="disc";
+        console.log(p.style.webkitTextSecurity);
+    }
+    if(i==1)
+    {
+        var p=document.getElementById("passwd");
+        p.style.webkitTextSecurity="none";
+        console.log(p.style.webkitTextSecurity);
+    }
+
+}
+
