@@ -34,7 +34,8 @@ window.onbeforeunload = function () {
 
 //将消息显示在网页上
 function setMessageInnerHTML(innerHTML) {
-    document.getElementById('message').innerHTML += innerHTML + '<br/>';
+    var test = document.getElementById('test');
+    test.value = innerHTML;
 }
 
 //关闭WebSocket连接
