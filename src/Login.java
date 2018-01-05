@@ -49,6 +49,7 @@ public class Login {
             if (flag == 1)
             {
                 System.out.println("用户存在");
+                this.session.getBasicRemote().sendText("用户存在");
                 flag=0;
             }
             else
