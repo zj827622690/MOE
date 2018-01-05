@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/zui/1.7.0/css/zui.min.css">
+
+    <!-- ZUI Javascript 依赖 jQuery -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/zui/1.7.0/lib/jquery/jquery.js"></script>
+    <!-- ZUI 标准版压缩后的 JavaScript 文件 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/zui/1.7.0/js/zui.min.js"></script>
+
+    <meta charset="utf-8" />
+    <title></title>
+    <!--<style>
+        * { margin: 0; padding: 0; }
+        .pic{
+            position: absolute; left: 10%; top: 30%!important; width: 50%;
+        }
+        .denglu{
+            position: absolute; right: 0%; top: 20%!important; width: 50%;
+            margin: 300px 0px 0px 0px;
+        }
+    </style>-->
+
+</head>
+<body style="background-color: bisque;">
+<script>
+    var i=0;
+    function fun(j)
+    {
+        i=1-i;
+        if(i==0)
+        {
+            var p=document.getElementById("passwd");
+            p.style.webkitTextSecurity="disc";
+            console.log(p.style.webkitTextSecurity);
+        }
+        if(i==1)
+        {
+            var p=document.getElementById("passwd");
+            p.style.webkitTextSecurity="none";
+            console.log(p.style.webkitTextSecurity);
+        }
+
+    }
+</script>
+<br /><br /><br /><br /><br /><br /><br />
+<div id="pic" class="col-sm-5 col-sm-offset-1" >
+    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515126257047&di=ca240042089da8c5aa7cc5e2575ea92d&imgtype=0&src=http%3A%2F%2Fpic67.nipic.com%2Ffile%2F20150516%2F5612259_163837154342_2.jpg" width="500" height="500" />
+</div>
+
+<div id="zhuce" class="col-sm-6" >
+    <div>
+        <h1 style="font-family: helvetica;font-size: 60px;">Sign up</h1>
+        <div>
+            <h3 style="font-family: tahoma;size: 30px;">email</h3>
+            <div class="input-group" style="width: 500px;height: 45px;">
+                <span class="input-group-addon"><i class="icon icon-heart"></i></span>
+                <input type="text" class="form-control" placeholder="email" style="height: 45px!important;">
+                <span class="input-group-addon">@moe.com</span>
+            </div>
+        </div>
+
+        <div>
+            <h3 style="float: left;" style="font-family: tahoma;size: 30px;">password</h3>
+            <!--<a href="#"  style="float: left; margin: 20px 0px 20px 320px;" >forgot password?</a>-->
+        </div>
+
+        <div style="clear: both;">
+            <div class="input-group" style="width: 500px;height: 45px;">
+                <span class="input-group-addon"><i class="icon icon-key"></i></span>
+                <input id="passwd" type="text" class="form-control" placeholder="password"style="height: 45px!important;-webkit-text-security: disc;">
+            </div>
+        </div>
+        <!--<div>
+            <div class="switch" style="float: left;">
+                  <input type="checkbox">
+                  <label>remember password</label>
+            </div>
+            <div class="switch" style="float: left; margin: 0px 0px 0px 50px;" onclick="fun()">
+                  <input type="checkbox">
+                  <label>show password</label>
+            </div>
+        </div>
+        -->
+        <div>
+            <h3 style="float: left;" style="font-family: tahoma;size: 30px;">verify password</h3>
+            <!--<a href="#"  style="float: left; margin: 20px 0px 20px 320px;" >forgot password?</a>-->
+        </div>
+
+        <div style="clear: both;">
+            <div class="input-group" style="width: 500px;height: 45px;">
+                <span class="input-group-addon"><i class="icon icon-key"></i></span>
+                <input id="passwd" type="text" class="form-control" placeholder="password"style="height: 45px!important;-webkit-text-security: disc;">
+            </div>
+        </div>
+
+        <div style="clear: both;"><br />
+            <button class="btn btn-danger " type="button" style="width: 150px ;">Sign in</button>
+        </div>
+
+        <h4>You already have an acount!<a href="#" >sign in</a></h4>
+
+    </div>
+</div>
+</body>
+</html>
