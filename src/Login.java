@@ -18,9 +18,9 @@ public class Login {
     {
         Connection con;
         String url = "jdbc:mysql://localhost:3306/MOE";
-        String driver = "org.mariadb.jdbc.Driver";
-        String user = "zy";
-        String password = "aptx4869";
+        String driver = "com.mysql.jdbc.Driver";
+        String user = "root";
+        String password = "123456";
 
         try
         {

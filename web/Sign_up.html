@@ -10,16 +10,27 @@
 
     <meta charset="utf-8" />
     <title></title>
-    <!--<style>
-        * { margin: 0; padding: 0; }
-        .pic{
-            position: absolute; left: 10%; top: 30%!important; width: 50%;
+    <style>
+        /** { margin: 0; padding: 0; }*/
+        /*.pic{*/
+        /*position: absolute; left: 10%; top: 30%!important; width: 50%;*/
+        /*}*/
+        /*.denglu{*/
+        /*position: absolute; right: 0%; top: 20%!important; width: 50%;*/
+        /*margin: 300px 0px 0px 0px;*/
+        /*}*/
+        body{
+
+            /*background: url(http://wenwen.soso.com/p/20120824/20120824154539-809286731.jpg);*/
+            background-size: 80px,60px;
+            border-radius: 40px;
+            background-repeat: no-repeat;
+            padding-top: 40px;
         }
-        .denglu{
-            position: absolute; right: 0%; top: 20%!important; width: 50%;
-            margin: 300px 0px 0px 0px;
-        }
-    </style>-->
+
+
+
+    </style>
 
 </head>
 <body style="background-color: bisque;">
@@ -93,13 +104,14 @@
                 <input id="passwd" type="text" class="form-control" placeholder="password"style="height: 45px!important;-webkit-text-security: disc;">
             </div>
         </div>
-
+        <br />
         <div style="clear: both;"><br />
-            <button class="btn btn-danger " type="button" style="width: 150px ;">Sign in</button>
+            <form action="demo-form.php">
+                <button class="btn btn-danger " type="button" style="width: 150px ;">Sign up</button>
+            </form>
         </div>
-
-        <h4>You already have an acount!<a href="#" >sign in</a></h4>
-
+        <br />
+        <h4>You already have an acount!<a href="index.jsp">sign in</a></h4>
     </div>
 </div>
 </body>
